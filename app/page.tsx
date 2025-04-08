@@ -9,104 +9,211 @@ import {
   Truck,
   FileWarning,
   BarChart3,
+  Check,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="w-full bg-teal-700 text-white py-12 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-2">REGULAMENTEI</h1>
-        <div className="w-16 h-1 bg-yellow-400 mx-auto mb-4"></div>
-        <p className="text-lg md:text-xl">
-          Transformando complexidade em conformidade.
-        </p>
-      </section>
+      <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full bg-teal-700 text-white py-20 px-4 text-center"
+      >
+        <div className="max-w-4xl mx-auto">
+          <motion.h1 
+            initial={{ y: -20 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-4xl md:text-6xl font-bold mb-4"
+          >
+            REGULAMENTEI
+          </motion.h1>
+          <motion.div 
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.4 }}
+            className="w-24 h-1 bg-yellow-400 mx-auto mb-6"
+          />
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="text-xl md:text-2xl"
+          >
+            Transformando complexidade em conformidade.
+          </motion.p>
+        </div>
+      </motion.section>
 
       {/* About Section */}
       <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 flex items-center justify-center mb-6">
-            Sobre
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Entendo a complexidade da conformidade regulatória no setor de
-            saúde. Por isso, minha especialidade é transformar esses desafios em
-            soluções práticas e eficientes para você.
-          </p>
-          <p className="text-gray-700 leading-relaxed font-medium">
-            Com processos transparentes e foco em resultados, ofereço o suporte
-            necessário para que sua empresa esteja sempre em conformidade com as
-            exigências regulatórias brasileiras.
-          </p>
+  <div className="max-w-3xl mx-auto text-center">
+    <h2 className="text-3xl font-bold text-gray-900 flex items-center justify-center mb-6">
+      Sobre Nós
+    </h2>
+    <p className="text-gray-700 leading-relaxed mb-4">
+      A Regulamentei é uma consultoria especializada em regulamentação sanitária, dedicada a solucionar desafios regulatórios para pequenas e médias empresas do setor de saúde. Oferecemos suporte completo em todas as etapas do processo regulatório, desde a abertura da empresa e entrada no mercado até a expansão de atividades e regularização de novos produtos.
+    </p>
+    <p className="text-gray-700 leading-relaxed mb-4">
+      Nossa expertise inclui análise de exigências regulatórias, revisão de sistemas de qualidade e desenvolvimento de estratégias personalizadas para interação com Anvisa e VISAs. Entendemos que cada desafio é único, por isso buscamos sempre a solução mais eficiente e alinhada aos objetivos do seu negócio.
+    </p>
+    <p className="text-gray-700 leading-relaxed font-medium">
+      Todas as demandas são avaliadas individualmente, com foco na otimização de processos regulatórios. Nosso diferencial está na capacidade de identificar oportunidades não exploradas, agregando valor estratégico às soluções que oferecemos.
+    </p>
+  </div>
+</section>
+      {/* Quem é a Regulamentei */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
+          >
+            Quem é a Regulamentei
+          </motion.h2>
+          
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="space-y-6">
+                <p className="text-lg text-gray-700">
+                  A Regulamentei nasceu da minha trajetória de <strong className="text-teal-600">10 anos atuando no setor regulatório</strong> de saúde. Sou <strong className="text-teal-600">Pedro Alves</strong>, farmacêutico com especialização em regulação.
+                </p>
+                <p className="text-lg text-gray-700">
+                  Construí uma <strong className="text-teal-600">rede de especialistas qualificados</strong> que complementam nosso trabalho nas diversas áreas regulatórias.
+                </p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-gray-50 p-6 rounded-lg shadow-sm"
+            >
+              <h3 className="font-semibold text-lg mb-4 text-teal-700">Especialidades:</h3>
+              <ul className="space-y-3">
+                {['Medicamentos', 'Dispositivos Médicos', 'Saneantes', 'Cosméticos', 'Regularização de Empresas'].map((item, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: 10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center"
+                  >
+                    <Check className="h-5 w-5 mr-3 text-teal-600 flex-shrink-0" />
+                    <span className="text-gray-700">{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-12 px-4 max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">
-          Serviços
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ServiceCard
-            icon={<Shield className="h-6 w-6 text-teal-600" />}
-            title="Regularização Empresarial"
-            description="Suporte completo para novos negócios na área da saúde: obtenção de alvarás sanitários, AFE e AE com agilidade e segurança regulatória."
-          />
-          <ServiceCard
-            icon={<FileCheck className="h-6 w-6 text-teal-600" />}
-            title="Auditoria Documental"
-            description="Revisão técnica especializada de sistemas de qualidade para garantir conformidade com exigências da Anvisa e Vigilância Sanitária."
-          />
-          <ServiceCard
-            icon={<FlaskConical className="h-6 w-6 text-teal-600" />}
-            title="Análise de Viabilidade"
-            description="Estudos técnico-regulatórios para lançamento de medicamentos, dispositivos médicos, cosméticos e saneantes."
-          />
-          <ServiceCard
-            icon={<Truck className="h-6 w-6 text-teal-600" />}
-            title="Licenciamento para Transporte"
-            description="Assessoria completa para transportadores: regularização sanitária e documentação para cargas especiais."
-          />
-          <ServiceCard
-            icon={<FileWarning className="h-6 w-6 text-teal-600" />}
-            title="Solução para Exigências"
-            description="Resposta técnica a exigências complexas da Anvisa e estratégias para desbloqueio de processos regulatórios."
-          />
-          <ServiceCard
-            icon={<BarChart3 className="h-6 w-6 text-teal-600" />}
-            title="Inteligência Regulatória"
-            description="Mapeamento completo dos concorrentes no mercado brasileiro: identifique quem são e quais dispositivos médicos similares estão registrados na Anvisa."
-          />
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16"
+          >
+            Nossos Serviços
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ServiceCard
+              icon={<Shield className="h-8 w-8 text-teal-600" />}
+              title="Regularização Empresarial"
+              description="Suporte completo para novos negócios na área da saúde: obtenção de alvarás sanitários, AFE e AE com agilidade e segurança regulatória."
+              className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            />
+            <ServiceCard
+              icon={<FileCheck className="h-8 w-8 text-teal-600" />}
+              title="Auditoria Documental"
+              description="Revisão técnica especializada de sistemas de qualidade para garantir conformidade com exigências da Anvisa e Vigilância Sanitária."
+              className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            />
+            <ServiceCard
+              icon={<FlaskConical className="h-8 w-8 text-teal-600" />}
+              title="Análise de Viabilidade"
+              description="Estudos técnico-regulatórios para lançamento de medicamentos, dispositivos médicos, cosméticos e saneantes."
+              className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            />
+            <ServiceCard
+              icon={<Truck className="h-8 w-8 text-teal-600" />}
+              title="Licenciamento para Transporte"
+              description="Assessoria completa para transportadores: regularização sanitária e documentação para cargas especiais."
+              className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            />
+            <ServiceCard
+              icon={<FileWarning className="h-8 w-8 text-teal-600" />}
+              title="Solução para Exigências"
+              description="Resposta técnica a exigências complexas da Anvisa e estratégias para desbloqueio de processos regulatórios."
+              className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            />
+            <ServiceCard
+              icon={<BarChart3 className="h-8 w-8 text-teal-600" />}
+              title="Inteligência Regulatória"
+              description="Mapeamento completo dos concorrentes no mercado brasileiro: identifique quem são e quais dispositivos médicos similares estão registrados na Anvisa."
+              className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            />
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="mt-auto bg-teal-700 text-white py-8 px-4 text-center">
-        <p className="mb-2 flex items-center justify-center">
-          <MapPin className="h-5 w-5 mr-2" />
-          Porto Alegre, RS | Brasil
-        </p>
-        <p className="mb-4 flex items-center justify-center">
-          <Mail className="h-5 w-5 mr-2" />
-          <a
-            href="mailto:pedro@regulamentei.com.br"
-            className="hover:underline ml-1"
-          >
-            pedro@regulamentei.com.br
-          </a>
-        </p>
-        <p className="text-sm">
-          Regulamento e privacidade de seus dados conforme a LGPD (Lei
-          13.709/2018)
-        </p>
-        <p className="text-sm mt-1">
-          © {new Date().getFullYear()} Regulamentei. Todos os direitos
-          reservados.
-        </p>
+      <footer className="mt-auto bg-gradient-to-r from-teal-700 to-teal-800 text-white py-12 px-4">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Contato</h3>
+            <address className="not-italic">
+              <p className="flex items-center mb-3">
+                <MapPin className="h-5 w-5 mr-3" />
+                Porto Alegre, RS | Brasil
+              </p>
+              <p className="flex items-center">
+                <Mail className="h-5 w-5 mr-3" />
+                <a href="mailto:pedro@regulamentei.com.br" className="hover:underline">
+                  pedro@regulamentei.com.br
+                </a>
+              </p>
+            </address>
+          </div>
+          
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Links Rápidos</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:underline">Sobre Nós</a></li>
+              <li><a href="#" className="hover:underline">Serviços</a></li>
+              <li><a href="#" className="hover:underline">Contato</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Legal</h3>
+            <p className="text-sm mb-2">
+              Conformidade com a LGPD (Lei 13.709/2018)
+            </p>
+            <p className="text-sm">
+              © {new Date().getFullYear()} Regulamentei. Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
       </footer>
 
-      {/* WhatsApp Button */}
       <WhatsappButton phoneNumber="5551993984165" />
     </main>
   );
