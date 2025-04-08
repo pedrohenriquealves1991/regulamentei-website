@@ -138,13 +138,13 @@ export default function Home() {
             <ServiceCard
               icon={<Shield className="h-8 w-8 text-teal-600" />}
               title="Regularização Empresarial"
-              description="Suporte completo para novos negócios na área da saúde: obtenção de alvarás sanitários, AFE e AE com agilidade e segurança regulatória."
+              description="Suporte completo para novos negócios na área da saúde: obtenção de alvarás sanitários, Autorização de funcionamento - AFE e autorização especial AE com agilidade e segurança regulatória."
               className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             />
             <ServiceCard
               icon={<FileCheck className="h-8 w-8 text-teal-600" />}
               title="Auditoria Documental"
-              description="Revisão técnica especializada de sistemas de qualidade para garantir conformidade com exigências da Anvisa e Vigilância Sanitária."
+              description="Revisão técnica especializada de sistemas de qualidade para garantir conformidade com exigências da Anvisa e VISAs."
               className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             />
             <ServiceCard
@@ -156,7 +156,7 @@ export default function Home() {
             <ServiceCard
               icon={<Truck className="h-8 w-8 text-teal-600" />}
               title="Licenciamento para Transporte"
-              description="Assessoria completa para transportadores: regularização sanitária e documentação para cargas especiais."
+              description="Assessoria completa para transportadoras: regularização sanitária e documentação de sistema de gestão qualidade prontos para o seu negócio."
               className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             />
             <ServiceCard
