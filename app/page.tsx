@@ -51,21 +51,22 @@ export default function Home() {
 
       {/* About Section */}
       <section className="py-16 px-4 bg-gray-50">
-  <div className="max-w-3xl mx-auto text-center">
-    <h2 className="text-3xl font-bold text-gray-900 flex items-center justify-center mb-6">
-      Sobre Nós
-    </h2>
-    <p className="text-gray-700 leading-relaxed mb-4">
-      A Regulamentei é uma consultoria especializada em regulamentação sanitária, dedicada a solucionar desafios regulatórios para pequenas e médias empresas do setor de saúde. Oferecemos suporte completo em todas as etapas do processo regulatório, desde a abertura da empresa e entrada no mercado até a expansão de atividades e regularização de novos produtos.
-    </p>
-    <p className="text-gray-700 leading-relaxed mb-4">
-      Nossa expertise inclui análise de exigências regulatórias, revisão de sistemas de qualidade e desenvolvimento de estratégias personalizadas para interação com Anvisa e VISAs. Entendemos que cada desafio é único, por isso buscamos sempre a solução mais eficiente e alinhada aos objetivos do seu negócio.
-    </p>
-    <p className="text-gray-700 leading-relaxed font-medium">
-      Todas as demandas são avaliadas individualmente, com foco na otimização de processos regulatórios. Nosso diferencial está na capacidade de identificar oportunidades não exploradas, agregando valor estratégico às soluções que oferecemos.
-    </p>
-  </div>
-</section>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 flex items-center justify-center mb-6">
+            Sobre Nós
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            A Regulamentei é uma consultoria especializada em regulamentação sanitária, dedicada a solucionar desafios regulatórios para pequenas e médias empresas do setor de saúde. Oferecemos supor[...]
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Nossa expertise inclui análise de exigências regulatórias, revisão de sistemas de qualidade e desenvolvimento de estratégias personalizadas para interação com Anvisa e VISAs. Entendemos q[...]
+          </p>
+          <p className="text-gray-700 leading-relaxed font-medium">
+            Todas as demandas são avaliadas individualmente, com foco na otimização de processos regulatórios. Nosso diferencial está na capacidade de identificar oportunidades não exploradas, agregan[...]
+          </p>
+        </div>
+      </section>
+
       {/* Quem é a Regulamentei */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -86,7 +87,7 @@ export default function Home() {
             >
               <div className="space-y-6">
                 <p className="text-lg text-gray-700">
-                  A Regulamentei nasceu da minha trajetória de <strong className="text-teal-600">10 anos atuando no setor regulatório</strong> de saúde. Sou <strong className="text-teal-600">Pedro Alves</strong>, farmacêutico com especialização em regulação.
+                  A Regulamentei nasceu da minha trajetória de <strong className="text-teal-600">10 anos atuando no setor regulatório</strong> de saúde. Sou <strong className="text-teal-600">Pedro [...]
                 </p>
                 <p className="text-lg text-gray-700">
                   Construí uma <strong className="text-teal-600">rede de especialistas qualificados</strong> que complementam nosso trabalho nas diversas áreas regulatórias.
