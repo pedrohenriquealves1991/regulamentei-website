@@ -87,7 +87,7 @@ export default function Home() {
             >
               <div className="space-y-6">
                 <p className="text-lg text-gray-700">
-                  A Regulamentei nasceu da minha trajetória de <strong className="text-teal-600">10 anos atuando no setor regulatório</strong> de saúde. Sou <strong className="text-teal-600">Pedro [...]
+                  A Regulamentei nasceu da minha trajetória de <strong className="text-teal-600">10 anos atuando no setor regulatório</strong> de saúde. Sou <strong className="text-teal-600">Pedro Alves</strong>, farmacêutico com especialização em regulação.
                 </p>
                 <p className="text-lg text-gray-700">
                   Construí uma <strong className="text-teal-600">rede de especialistas qualificados</strong> que complementam nosso trabalho nas diversas áreas regulatórias.
