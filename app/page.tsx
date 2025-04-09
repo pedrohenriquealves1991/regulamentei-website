@@ -11,80 +11,51 @@ import {
   BarChart3,
   Check,
 } from "lucide-react";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <motion.section 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="w-full bg-teal-700 text-white py-20 px-4 text-center"
-      >
+      <section className="w-full bg-teal-700 text-white py-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <motion.h1 
-            initial={{ y: -20 }}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold mb-4"
-          >
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
             REGULAMENTEI
-          </motion.h1>
-          <motion.div 
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.4 }}
-            className="w-24 h-1 bg-yellow-400 mx-auto mb-6"
-          />
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="text-xl md:text-2xl"
-          >
+          </h1>
+          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6" />
+          <p className="text-xl md:text-2xl">
             Transformando complexidade em conformidade.
-          </motion.p>
+          </p>
         </div>
-      </motion.section>
+      </section>
 
       {/* About Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 flex items-center justify-center mb-6">
-            Sobre Nós
+      <section className="relative py-20 px-4 bg-gray-50">
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 to-yellow-400"></div>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            Sobre
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            A Regulamentei é uma consultoria especializada em regulamentação sanitária, dedicada a solucionar desafios regulatórios para pequenas e médias empresas do setor de saúde. Oferecemos supor[...]
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Nossa expertise inclui análise de exigências regulatórias, revisão de sistemas de qualidade e desenvolvimento de estratégias personalizadas para interação com Anvisa e VISAs. Entendemos q[...]
-          </p>
-          <p className="text-gray-700 leading-relaxed font-medium">
-            Todas as demandas são avaliadas individualmente, com foco na otimização de processos regulatórios. Nosso diferencial está na capacidade de identificar oportunidades não exploradas, agregan[...]
-          </p>
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Nossa expertise inclui análise de exigências regulatórias, revisão de sistemas de qualidade e desenvolvimento de estratégias personalizadas para interação com Anvisa e VISAs.
+            </p>
+            <div className="w-full border-t border-gray-200 my-4"></div>
+            <p className="text-lg text-gray-700 font-medium">
+              Todas as demandas são avaliadas individualmente, com foco na otimização de processos regulatórios.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Quem é a Regulamentei */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
-          >
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
             Quem é a Regulamentei
-          </motion.h2>
+          </h2>
           
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <div className="space-y-6">
                 <p className="text-lg text-gray-700">
                   A Regulamentei nasceu da minha trajetória de <strong className="text-teal-600">10 anos atuando no setor regulatório</strong> de saúde. Sou <strong className="text-teal-600">Pedro Alves</strong>, farmacêutico com especialização em regulação.
@@ -93,31 +64,19 @@ export default function Home() {
                   Construí uma <strong className="text-teal-600">rede de especialistas qualificados</strong> que complementam nosso trabalho nas diversas áreas regulatórias.
                 </p>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 p-6 rounded-lg shadow-sm"
-            >
+            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
               <h3 className="font-semibold text-lg mb-4 text-teal-700">Especialidades:</h3>
               <ul className="space-y-3">
-                {['Medicamentos', 'Dispositivos Médicos', 'Saneantes', 'Cosméticos', 'Regularização de Empresas'].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: 10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center"
-                  >
+                {['Medicamentos', 'Dispositivos Médicos', 'Saneantes', 'Cosméticos', 'Regularização de Empresas'].map((item) => (
+                  <li key={item} className="flex items-center">
                     <Check className="h-5 w-5 mr-3 text-teal-600 flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -125,26 +84,21 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16"
-          >
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
             Nossos Serviços
-          </motion.h2>
+          </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
               icon={<Shield className="h-8 w-8 text-teal-600" />}
               title="Regularização Empresarial"
-              description="Suporte completo para novos negócios na área da saúde: obtenção de alvarás sanitários, Autorização de funcionamento - AFE e autorização especial AE com agilidade e segurança regulatória."
+              description="Suporte completo para novos negócios na área da saúde: obtenção de alvarás sanitários, AFE e AE com agilidade e segurança regulatória."
               className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             />
             <ServiceCard
               icon={<FileCheck className="h-8 w-8 text-teal-600" />}
               title="Auditoria Documental"
-              description="Revisão técnica especializada de sistemas de qualidade para garantir conformidade com exigências da Anvisa e VISAs."
+              description="Revisão técnica especializada de sistemas de qualidade para garantir conformidade com exigências da Anvisa e Vigilância Sanitária."
               className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             />
             <ServiceCard
@@ -156,7 +110,7 @@ export default function Home() {
             <ServiceCard
               icon={<Truck className="h-8 w-8 text-teal-600" />}
               title="Licenciamento para Transporte"
-              description="Assessoria completa para transportadoras: regularização sanitária e documentação de sistema de gestão qualidade prontos para o seu negócio."
+              description="Assessoria completa para transportadores: regularização sanitária e documentação para cargas especiais."
               className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             />
             <ServiceCard
