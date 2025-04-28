@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Início", href: "#home" },
   { name: "Quem Somos", href: "#about" },
   { name: "Serviços", href: "#services" },
+  { name: "Pagamento", href: "#payment" },
   { name: "Contato", href: "#contact" },
 ]
 

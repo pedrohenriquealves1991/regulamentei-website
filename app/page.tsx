@@ -6,6 +6,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Navbar } from "@/components/navbar"
 import { Logo } from "@/components/logo"
 import { SocialIcons } from "@/components/social-icons"
+import { PaymentMethods } from "@/components/payment-methods"
 import { MapPin, Mail, Shield, FileCheck, FlaskConical, Truck, FileWarning, BarChart3 } from "lucide-react"
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
         <section id="about" className="py-16 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 text-center mb-10">Quem Somos</h2>
+              <h2 className="text-3xl font-bold text-gray-900 text-center mb-10">Quem é a Regulamentei</h2>
             </AnimatedSection>
 
             <div className="grid md:grid-cols-2 gap-10 mb-10">
@@ -43,6 +44,7 @@ export default function Home() {
                   name="Pedro Alves"
                   title="Farmacêutico | Especialista em Regulação"
                   description="Com 10 anos de experiência no setor regulatório de saúde, fundei a Regulamentei para transformar a complexidade dos processos regulatórios em soluções claras e eficientes para empresas que buscam conformidade."
+                  imageSrc="/pedro-alves.jpeg"
                 />
               </AnimatedSection>
 
@@ -50,14 +52,17 @@ export default function Home() {
                 <div className="space-y-4">
                   <h3 className="text-xl font-semibold text-teal-700 border-l-4 border-teal-500 pl-3">A Empresa</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    A Regulamentei nasceu da ideia de criar uma consultoria regulatória mais arrojada, que não apenas
-                    resolve problemas, mas antecipa soluções que o cliente pode não ter visualizado por falta de uma
-                    inteligência regulatória interna.
+                    A Regulamentei nasce para atender empresas de pequeno e médio porte do setor de saúde que não
+                    dispõem de uma estrutura regulatória ou de qualidade interna com experiência ou tamanho suficientes
+                    para demandas pontuais e sazonais, como lançamento de um produto, preparação para auditorias ou
+                    resposta a exigências da Anvisa e da Vigilância Sanitária.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    Nosso foco é atender pequenas e médias empresas que não possuem capacidade ou para as quais não faz
-                    sentido investir em uma área regulatória ou de qualidade própria. Preenchemos esse espaço com
-                    soluções eficientes e personalizadas.
+                    Como consultoria, a Regulamentei não se limita a apresentar diagnósticos e planos de ação genéricos:
+                    compreende a realidade de cada cliente, propõe soluções viáveis e atua lado a lado em cada etapa.
+                    Para garantir atendimento de qualidade, conta com uma rede colaborativa de farmacêuticos, químicos e
+                    engenheiros de alimentos, acionada conforme a especialidade requerida, tudo sob um orçamento único e
+                    com pagamento por cartão de crédito, sem contratos longos ou complexos.
                   </p>
                 </div>
               </AnimatedSection>
@@ -65,6 +70,16 @@ export default function Home() {
 
             <AnimatedSection animation="fade-up" delay={400}>
               <HowWeWork />
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* Payment Methods Section */}
+        <section id="payment" className="py-12 px-4 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <AnimatedSection animation="fade-up">
+              <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Facilidade de Pagamento</h2>
+              <PaymentMethods />
             </AnimatedSection>
           </div>
         </section>
