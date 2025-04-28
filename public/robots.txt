@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://regulamentei.com.br/sitemap.xml
+
+# Crawl delay to prevent server overload
+Crawl-delay: 10
