@@ -1,4 +1,4 @@
-import { CreditCard, Wallet, Receipt, ArrowRight } from "lucide-react"
+import { CreditCard, Wallet, Receipt } from "lucide-react"
 import { AnimatedSection } from "./animated-section"
 
 export function PaymentMethods() {
@@ -17,12 +17,9 @@ export function PaymentMethods() {
               <CreditCard className="h-8 w-8 text-teal-600 mr-3" />
               <h3 className="text-xl font-semibold text-gray-800">Cartão de Crédito</h3>
             </div>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600">
               Pagamento rápido e seguro via link, com possibilidade de parcelamento em até 12x.
             </p>
-            <div className="flex justify-end">
-              <ArrowRight className="h-5 w-5 text-teal-600" />
-            </div>
           </div>
         </AnimatedSection>
 
@@ -32,12 +29,9 @@ export function PaymentMethods() {
               <Receipt className="h-8 w-8 text-teal-600 mr-3" />
               <h3 className="text-xl font-semibold text-gray-800">Orçamento Único</h3>
             </div>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600">
               Valor fechado para todo o projeto, sem surpresas ou custos adicionais durante o processo.
             </p>
-            <div className="flex justify-end">
-              <ArrowRight className="h-5 w-5 text-teal-600" />
-            </div>
           </div>
         </AnimatedSection>
 
@@ -47,12 +41,9 @@ export function PaymentMethods() {
               <Wallet className="h-8 w-8 text-teal-600 mr-3" />
               <h3 className="text-xl font-semibold text-gray-800">Sem Contratos Complexos</h3>
             </div>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600">
               Processo simplificado, sem burocracia excessiva ou compromissos de longo prazo.
             </p>
-            <div className="flex justify-end">
-              <ArrowRight className="h-5 w-5 text-teal-600" />
-            </div>
           </div>
         </AnimatedSection>
       </div>

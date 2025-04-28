@@ -4,11 +4,10 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { Logo } from "./logo"
-import { SocialIcons } from "./social-icons"
 
 const navLinks = [
   { name: "Início", href: "#home" },
-  { name: "Quem Somos", href: "#about" },
+  { name: "Sobre", href: "#about" },
   { name: "Serviços", href: "#services" },
   { name: "Pagamento", href: "#payment" },
   { name: "Contato", href: "#contact" },
@@ -52,7 +51,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center">
             <nav>
               <ul className="flex space-x-8">
                 {navLinks.map((link) => (
@@ -69,7 +68,6 @@ export function Navbar() {
                 ))}
               </ul>
             </nav>
-            <SocialIcons variant={isScrolled ? "default" : "footer"} iconSize={18} />
           </div>
 
           {/* Mobile Menu Button */}
@@ -98,9 +96,6 @@ export function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="px-4 py-3 border-t border-gray-100 mt-2">
-              <SocialIcons />
-            </li>
           </ul>
         </nav>
       )}

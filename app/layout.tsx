@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo.svg",
         width: 500,
         height: 500,
         alt: "Regulamentei Logo",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       "Transformando complexidade em conformidade. Consultoria especializada em regularização empresarial, auditoria documental e inteligência regulatória.",
     creator: "@regulamentei",
-    images: ["/logo.png"],
+    images: ["/logo.svg"],
   },
   robots: {
     index: true,
@@ -60,12 +60,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
     other: {
       rel: "apple-touch-icon-precomposed",
-      url: "/logo.png",
+      url: "/logo.svg",
     },
   },
   verification: {
@@ -103,8 +103,8 @@ export default function RootLayout({
               url: "https://regulamentei.com.br",
               telephone: "+5551993984165",
               email: "pedro@regulamentei.com.br",
-              logo: "https://regulamentei.com.br/logo.png",
-              image: "https://regulamentei.com.br/logo.png",
+              logo: "https://regulamentei.com.br/logo.svg",
+              image: "https://regulamentei.com.br/logo.svg",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Porto Alegre",

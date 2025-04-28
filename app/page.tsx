@@ -5,7 +5,6 @@ import { HowWeWork } from "@/components/how-we-work"
 import { AnimatedSection } from "@/components/animated-section"
 import { Navbar } from "@/components/navbar"
 import { Logo } from "@/components/logo"
-import { SocialIcons } from "@/components/social-icons"
 import { PaymentMethods } from "@/components/payment-methods"
 import { MapPin, Mail, Shield, FileCheck, FlaskConical, Truck, FileWarning, BarChart3 } from "lucide-react"
 
@@ -17,38 +16,26 @@ export default function Home() {
         <Navbar />
 
         {/* Hero Section */}
-        <section id="home" className="w-full bg-teal-700 text-white pt-24 pb-16 px-4">
-          <AnimatedSection animation="fade-in" delay={100}>
-            <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto">
-              <Logo size="hero-large" className="mb-8 md:mb-0 md:mr-8" />
-
-              <div className="flex flex-col items-center text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">REGULAMENTEI</h1>
-                <div className="w-16 h-1 bg-yellow-400 mb-4"></div>
-                <p className="text-lg md:text-xl">Transformando complexidade em conformidade.</p>
-              </div>
+        <section id="home" className="w-full bg-teal-700 text-white pt-24 pb-16 px-4 flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center mb-8">
+              <Logo size="hero-xl" className="mb-8" />
+              <h1 className="text-4xl md:text-6xl font-bold text-center">REGULAMENTEI</h1>
+              <div className="w-16 h-1 bg-yellow-400 my-4"></div>
+              <p className="text-lg md:text-xl text-center">Transformando complexidade em conformidade.</p>
             </div>
-          </AnimatedSection>
+          </div>
         </section>
 
         {/* About Section */}
         <section id="about" className="py-16 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 text-center mb-10">Quem é a Regulamentei</h2>
+              <h2 className="text-3xl font-bold text-gray-900 text-center mb-10">Sobre</h2>
             </AnimatedSection>
 
             <div className="grid md:grid-cols-2 gap-10 mb-10">
               <AnimatedSection animation="slide-in-left" delay={200}>
-                <FounderCard
-                  name="Pedro Alves"
-                  title="Farmacêutico | Especialista em Regulação"
-                  description="Com 10 anos de experiência no setor regulatório de saúde, fundei a Regulamentei para transformar a complexidade dos processos regulatórios em soluções claras e eficientes para empresas que buscam conformidade."
-                  imageSrc="/pedro-alves.jpeg"
-                />
-              </AnimatedSection>
-
-              <AnimatedSection animation="slide-in-right" delay={300}>
                 <div className="space-y-4">
                   <h3 className="text-xl font-semibold text-teal-700 border-l-4 border-teal-500 pl-3">A Empresa</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -65,6 +52,15 @@ export default function Home() {
                     com pagamento por cartão de crédito, sem contratos longos ou complexos.
                   </p>
                 </div>
+              </AnimatedSection>
+
+              <AnimatedSection animation="slide-in-right" delay={300}>
+                <FounderCard
+                  name="Pedro Alves"
+                  title="Farmacêutico | Especialista em Regulação"
+                  description="Com 10 anos de experiência no setor regulatório de saúde, fundei a Regulamentei para transformar a complexidade dos processos regulatórios em soluções claras e eficientes para empresas que buscam conformidade."
+                  imageSrc="/pedro-alves.jpeg"
+                />
               </AnimatedSection>
             </div>
 
@@ -144,41 +140,89 @@ export default function Home() {
         {/* Footer */}
         <footer id="contact" className="mt-auto bg-teal-700 text-white py-8 px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center justify-between mb-6">
-              <div className="flex items-center mb-4 md:mb-0">
-                <Logo size="medium" className="mr-3" />
-                <h2 className="text-2xl font-bold">REGULAMENTEI</h2>
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <div className="flex items-center">
+                  <Logo size="small" className="mr-3" />
+                  <h2 className="text-2xl font-bold">REGULAMENTEI</h2>
+                </div>
+                <p className="flex items-center mt-4">
+                  <MapPin className="h-5 w-5 mr-3" />
+                  Porto Alegre, RS | Brasil
+                </p>
               </div>
-              <div className="text-center md:text-right">
-                <h3 className="text-xl font-semibold mb-2">Entre em contato</h3>
-                <p className="text-white/80">Estamos prontos para ajudar sua empresa</p>
-              </div>
-            </div>
 
-            <AnimatedSection animation="fade-in">
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <p className="mb-2 flex items-center">
-                    <MapPin className="h-5 w-5 mr-2" />
-                    Porto Alegre, RS | Brasil
-                  </p>
-                  <p className="mb-2 flex items-center">
-                    <Mail className="h-5 w-5 mr-2" />
-                    Contato:{" "}
-                    <a href="mailto:pedro@regulamentei.com.br" className="hover:underline ml-1">
+              <div className="text-left md:text-right">
+                <h3 className="text-xl font-semibold mb-4">Entre em contato</h3>
+                <div className="space-y-4">
+                  <p className="flex items-center md:justify-end">
+                    <Mail className="h-5 w-5 mr-3" />
+                    <a href="mailto:pedro@regulamentei.com.br" className="hover:text-yellow-400 transition-colors">
                       pedro@regulamentei.com.br
                     </a>
                   </p>
-                  <div className="mt-4">
-                    <SocialIcons variant="footer" iconSize={22} />
-                  </div>
-                </div>
-                <div className="md:text-right">
-                  <p className="text-sm">Regulamento e privacidade de seus dados conforme a LGPD (Lei 13.709/2018)</p>
-                  <p className="text-sm mt-1">© 2025 Regulamentei. Todos os direitos reservados.</p>
+                  <p className="flex items-center md:justify-end">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="mr-3"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <a
+                      href="https://www.instagram.com/regulamentei"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-yellow-400 transition-colors"
+                    >
+                      instagram.com/regulamentei
+                    </a>
+                  </p>
+                  <p className="flex items-center md:justify-end">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="mr-3"
+                    >
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <a
+                      href="https://www.linkedin.com/company/regulamentei"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-yellow-400 transition-colors"
+                    >
+                      linkedin.com/company/regulamentei
+                    </a>
+                  </p>
                 </div>
               </div>
-            </AnimatedSection>
+            </div>
+
+            <div className="border-t border-white/20 pt-4">
+              <p className="text-sm text-center">
+                Regulamento e privacidade de seus dados conforme a LGPD (Lei 13.709/2018)
+              </p>
+              <p className="text-sm text-center mt-1">© 2025 Regulamentei. Todos os direitos reservados.</p>
+            </div>
           </div>
         </footer>
 
