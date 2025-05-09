@@ -8,8 +8,8 @@ import { Logo } from "./logo"
 const navLinks = [
   { name: "Início", href: "#home" },
   { name: "Sobre", href: "#about" },
-  { name: "Serviços", href: "#services" },
   { name: "Pagamento", href: "#payment" },
+  { name: "Serviços", href: "#services" },
   { name: "Contato", href: "#contact" },
 ]
 
