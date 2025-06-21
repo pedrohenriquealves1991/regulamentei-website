@@ -1,4 +1,4 @@
-import { CreditCard, Wallet, Receipt } from "lucide-react"
+import { CreditCard, Receipt, Send } from "lucide-react"
 import { AnimatedSection } from "./animated-section"
 
 export function PaymentMethods() {
@@ -18,7 +18,7 @@ export function PaymentMethods() {
               <h3 className="text-xl font-semibold text-gray-800">Cartão de Crédito</h3>
             </div>
             <p className="text-gray-600">
-              Pagamento rápido e seguro via link, com possibilidade de parcelamento em até 12x.
+              Pagamento rápido e seguro via link, com possibilidade de parcelamento em até 12x (taxa de até 5.5%).
             </p>
           </div>
         </AnimatedSection>
@@ -26,11 +26,11 @@ export function PaymentMethods() {
         <AnimatedSection animation="fade-up" delay={200}>
           <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal-500 hover:shadow-md transition-all duration-300 h-full">
             <div className="flex items-center mb-4">
-              <Receipt className="h-8 w-8 text-teal-600 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-800">Orçamento Único</h3>
+              <Send className="h-8 w-8 text-teal-600 mr-3" />
+              <h3 className="text-xl font-semibold text-gray-800">Pix e Transferência</h3>
             </div>
             <p className="text-gray-600">
-              Valor fechado para todo o projeto, sem surpresas ou custos adicionais durante o processo.
+              Modalidade tradicional de pagamento, oferecendo praticidade e agilidade na transação.
             </p>
           </div>
         </AnimatedSection>
@@ -38,11 +38,11 @@ export function PaymentMethods() {
         <AnimatedSection animation="fade-up" delay={300}>
           <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal-500 hover:shadow-md transition-all duration-300 h-full">
             <div className="flex items-center mb-4">
-              <Wallet className="h-8 w-8 text-teal-600 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-800">Sem Contratos Complexos</h3>
+              <Receipt className="h-8 w-8 text-teal-600 mr-3" />
+              <h3 className="text-xl font-semibold text-gray-800">Orçamento Único</h3>
             </div>
             <p className="text-gray-600">
-              Processo simplificado, sem burocracia excessiva ou compromissos de longo prazo.
+              Valor fechado para todo o projeto, sem surpresas ou custos adicionais durante o processo.
             </p>
           </div>
         </AnimatedSection>
