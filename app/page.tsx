@@ -53,21 +53,15 @@ export default function Home() {
           <div className="container mx-auto text-center">
             <AnimatedSection animation="fade-up">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Regulamentei — Consultoria em Assuntos Regulatórios
+                Regulamentei — Consultoria em Assuntos Regulatórios para pequenas e médias empresas da área da saúde
               </h1>
             </AnimatedSection>
             <AnimatedSection animation="fade-up" delay={100}>
-              <p className="text-2xl md:text-3xl mb-6 max-w-3xl mx-auto font-medium">
-                Consultoria regulatória para pequenas e médias empresas da área da saúde
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Precisa lidar com a ANVISA e não tem um setor regulatório interno, a Regulamentei pode ajudar.
               </p>
             </AnimatedSection>
             <AnimatedSection animation="fade-up" delay={200}>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Se sua empresa precisa lidar com a ANVISA e você não tem um setor regulatório interno, a Regulamentei
-                pode ajudar.
-              </p>
-            </AnimatedSection>
-            <AnimatedSection animation="fade-up" delay={300}>
               <div className="max-w-2xl mx-auto text-lg mb-10 space-y-4">
                 <p>
                   Apoiamos negócios que fabricam, distribuem, transportam ou importam produtos sujeitos à Vigilância
@@ -79,7 +73,7 @@ export default function Home() {
                 </p>
               </div>
             </AnimatedSection>
-            <AnimatedSection animation="fade-up" delay={600}>
+            <AnimatedSection animation="fade-up" delay={300}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="https://wa.me/5551993984165"
