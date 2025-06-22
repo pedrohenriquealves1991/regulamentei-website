@@ -64,10 +64,6 @@ export default function Home() {
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="max-w-2xl mx-auto text-lg mb-10 space-y-4">
                 <p>
-                  Apoiamos negócios que fabricam, distribuem, transportam ou importam produtos sujeitos à Vigilância
-                  Sanitária.
-                </p>
-                <p>
                   Cuidamos da parte regulatória para você se concentrar no que importa: operar com segurança e dentro da
                   lei.
                 </p>
