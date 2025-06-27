@@ -10,6 +10,7 @@ import { PaymentMethods } from "@/components/payment-methods"
 import { Logo } from "@/components/logo"
 import { MapPin, Mail, Shield, FlaskConical, Truck, FileWarning, Microscope, Lightbulb } from "lucide-react"
 import { WhatsappLogo } from "@/components/icons"
+import { TextAlignmentTest } from "@/components/text-alignment-test"
 
 import { useEffect } from "react"
 import { ConsultantCtaSection } from "@/components/consultant-cta-section"
@@ -42,6 +43,9 @@ export default function Home() {
   return (
     <>
       <main className="flex min-h-screen flex-col">
+        {/* Componente de teste - remover após verificação */}
+        <TextAlignmentTest />
+
         {/* Navbar */}
         <Navbar />
 

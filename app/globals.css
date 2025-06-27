@@ -30,12 +30,76 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Justificação responsiva - apenas em telas maiores */
 .text-justified {
+  text-align: left; /* Padrão para mobile */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Aplica justificação apenas em tablets e desktop */
+@media (min-width: 640px) {
+  .text-justified {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+  }
+}
+
+/* Para telas muito grandes, limita a largura das linhas para melhor legibilidade */
+@media (min-width: 1024px) {
+  .text-justified {
+    max-width: 65ch; /* Aproximadamente 65 caracteres por linha */
+  }
+}
+
+/* Classe específica para textos que devem sempre ser justificados */
+.text-justified-always {
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Classe para textos que nunca devem ser justificados */
+.text-left-always {
+  text-align: left !important;
+}
+
+/* Indicador visual para teste - remover após verificação */
+.text-justified::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: transparent;
+}
+
+@media (max-width: 639px) {
+  .text-justified::before {
+    background: #ef4444; /* Vermelho para mobile (alinhado à esquerda) */
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .text-justified::before {
+    background: #f59e0b; /* Amarelo para tablet (justificado) */
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-justified::before {
+    background: #10b981; /* Verde para desktop (justificado + largura limitada) */
+  }
 }
 
 /* Estilos mobile-first para evitar FOUC */

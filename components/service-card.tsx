@@ -30,7 +30,7 @@ export function ServiceCard({ title, shortDescription, icon, slug }: ServiceCard
               {title}
             </h3>
           </div>
-          <p className="text-gray-600 text-justified text-body-optimized">{shortDescription}</p>
+          <p className="text-gray-600 text-justified text-body-optimized leading-relaxed">{shortDescription}</p>
         </div>
 
         <div className="pt-4">
