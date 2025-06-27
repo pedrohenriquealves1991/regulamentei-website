@@ -52,18 +52,18 @@ export default function Home() {
         >
           <div className="container mx-auto text-center">
             <AnimatedSection animation="fade-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-optimized">
                 Regulamentei — Consultoria em Assuntos Regulatórios para pequenas e médias empresas da área da saúde
               </h1>
             </AnimatedSection>
             <AnimatedSection animation="fade-up" delay={100}>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Precisa lidar com a ANVISA e não tem um setor regulatório interno, a Regulamentei pode ajudar.
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-body-optimized">
+                Precisa lidar com a ANVISA e não tem um setor regulatório interno, podemos te ajudar.
               </p>
             </AnimatedSection>
             <AnimatedSection animation="fade-up" delay={200}>
               <div className="max-w-2xl mx-auto text-lg mb-10 space-y-4">
-                <p>
+                <p className="text-body-optimized">
                   Cuidamos da parte regulatória para você se concentrar no que importa: operar com segurança e dentro da
                   lei.
                 </p>
@@ -97,7 +97,7 @@ export default function Home() {
         {/* Services Section */}
         <section id="services" className="py-16 px-4 max-w-7xl mx-auto">
           <AnimatedSection animation="fade-up">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Nossos Serviços</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 text-optimized">Nossos Serviços</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -161,7 +161,9 @@ export default function Home() {
         <section id="payment" className="py-16 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Facilidade de Pagamento</h2>
+              <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 text-optimized">
+                Facilidade de Pagamento
+              </h2>
               <PaymentMethods />
             </AnimatedSection>
           </div>
@@ -176,18 +178,18 @@ export default function Home() {
         <section id="about" className="py-16 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">A Empresa</h2>
+              <h2 className="text-3xl font-bold text-gray-900 text-center mb-12 text-optimized">A Empresa</h2>
             </AnimatedSection>
             <div className="grid md:grid-cols-2 gap-10 mb-10">
               <AnimatedSection animation="slide-in-left" delay={200}>
                 <div className="space-y-4">
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed text-justified text-body-optimized">
                     A Regulamentei nasce para atender empresas de pequeno e médio porte do setor de saúde que não
                     dispõem de uma estrutura regulatória ou de qualidade interna com experiência ou tamanho suficientes
                     para demandas pontuais e sazonais, como lançamento de um produto, preparação para auditorias ou
                     resposta a exigências da Anvisa e da Vigilância Sanitária.
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed text-justified text-body-optimized">
                     Como consultoria, a Regulamentei não se limita a apresentar diagnósticos e planos de ação genéricos:
                     compreende a realidade de cada cliente, propõe soluções viáveis e atua lado a lado em cada etapa.
                     Para garantir atendimento de qualidade, conta com uma rede colaborativa de farmacêuticos, químicos e
@@ -217,7 +219,7 @@ export default function Home() {
         <section id="contact" className="py-16 px-4 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedSection animation="fade-up">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Fale Conosco</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4 text-optimized">Fale Conosco</h2>
               <p className="text-lg text-gray-600 mb-10">
                 Estamos prontos para atender você. Entre em contato diretamente pelo WhatsApp.
               </p>

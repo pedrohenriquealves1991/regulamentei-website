@@ -28,7 +28,7 @@ export const servicesData: ServicesObject = {
     title: "Regularização Empresarial e Análise de Viabilidade",
     content: (
       <>
-        <p className="mb-6 text-xl leading-relaxed">
+        <p className="mb-6 text-xl leading-relaxed text-justified text-body-optimized">
           Na Regulamentei, auxiliamos na regularização da sua empresa junto aos órgãos de Vigilância Sanitária,
           garantindo segurança e operação dentro da lei.
         </p>
@@ -51,7 +51,7 @@ export const servicesData: ServicesObject = {
     title: "Registro e Pós-Registro de Medicamentos",
     content: (
       <>
-        <p className="mb-6 text-xl leading-relaxed">
+        <p className="mb-6 text-xl leading-relaxed text-justified text-body-optimized">
           Garantimos a conformidade e a qualidade da documentação técnica dos seus medicamentos em todas as fases do
           ciclo de vida.
         </p>
@@ -70,7 +70,7 @@ export const servicesData: ServicesObject = {
     title: "Licenciamento para Transportadoras",
     content: (
       <>
-        <p className="mb-6 text-xl leading-relaxed">
+        <p className="mb-6 text-xl leading-relaxed text-justified text-body-optimized">
           Seu transporte regularizado para atuar com produtos controlados. A Regulamentei presta suporte completo para
           transportadoras que necessitam da licença sanitária para operar com substâncias sujeitas ao controle da
           ANVISA.
@@ -90,7 +90,7 @@ export const servicesData: ServicesObject = {
     title: "Solução para Exigências",
     content: (
       <>
-        <p className="mb-6 text-xl leading-relaxed">
+        <p className="mb-6 text-xl leading-relaxed text-justified text-body-optimized">
           Responda exigências da ANVISA com precisão técnica. Recebeu uma exigência e não sabe como responder? A
           Regulamentei pode te ajudar a encontrar uma solução.
         </p>
@@ -109,17 +109,17 @@ export const servicesData: ServicesObject = {
     title: "Pesquisa Clínica de Dispositivos Médicos",
     content: (
       <>
-        <p className="mb-6 text-xl leading-relaxed">
+        <p className="mb-6 text-xl leading-relaxed text-justified text-body-optimized">
           Na Regulamentei, montamos ou revisamos todo o conjunto de documentos para que seu estudo atenda rigorosamente
           às normas da ANVISA e dos Comitês de Ética em Pesquisa (CEP/CONEP). Acompanhe como estruturamos cada etapa:
         </p>
         <div className="space-y-8">
           <div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Avaliação de Viabilidade e Requisitos</h3>
-            <p className="text-lg mb-3">
+            <p className="text-lg mb-3 text-justified text-body-optimized">
               Analisamos o escopo do estudo e classificamos o dispositivo em risco I, II, III ou IV.
             </p>
-            <p className="text-lg">
+            <p className="text-lg text-justified text-body-optimized">
               Identificamos todas as normas aplicáveis — Resolução da Diretoria Colegiada (RDC) 837/2023, Instrução
               Normativa (IN) 321/2024, norma ISO 14155 (Boas Práticas Clínicas em Dispositivos Médicos) — e mapeamos
               exigências de registro/notificação na Agência Nacional de Vigilância Sanitária (ANVISA), parecer do Comitê
@@ -131,7 +131,9 @@ export const servicesData: ServicesObject = {
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Construção ou Revisão do Dossiê de Investigação Clínica de Dispositivo Médico (DICD)
             </h3>
-            <p className="mb-4 text-lg">Nós preparamos ou aperfeiçoamos cada documento essencial:</p>
+            <p className="mb-4 text-lg text-justified text-body-optimized">
+              Nós preparamos ou aperfeiçoamos cada documento essencial:
+            </p>
             <ul className="list-disc list-inside space-y-3 text-lg">
               <li>
                 <strong>Protocolo de Pesquisa:</strong> desenho do estudo, critérios de inclusão/exclusão, desfechos
@@ -175,11 +177,11 @@ export const servicesData: ServicesObject = {
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
               Submissão e Acompanhamento de Respostas às Exigências
             </h3>
-            <p className="text-lg mb-3">
+            <p className="text-lg mb-3 text-justified text-body-optimized">
               Enviamos o Dossiê de Investigação Clínica de Dispositivo Médico (DICD) pela Plataforma Eletrônica de
               Peticionamento (PET) da ANVISA e, em paralelo, ao Comitê de Ética em Pesquisa (CEP/CONEP).
             </p>
-            <p className="text-lg">
+            <p className="text-lg text-justified text-body-optimized">
               Analisamos cada exigência que a ANVISA emite, redigimos complementos e atualizamos documentos e protocolos
               para atender às solicitações técnicas.
             </p>
@@ -193,28 +195,28 @@ export const servicesData: ServicesObject = {
     title: "Inteligência Regulatória Estratégica",
     content: (
       <>
-        <p className="mb-6 text-xl leading-relaxed">
+        <p className="mb-6 text-xl leading-relaxed text-justified text-body-optimized">
           A Regulamentei ajuda você a pensar em novas oportunidades de mercado, analisando a concorrência e facilitando
           a expansão do seu portfólio de produtos.
         </p>
         <div className="space-y-8">
           <div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Identificação de Novas Áreas de Atuação</h3>
-            <p className="text-lg">
+            <p className="text-lg text-justified text-body-optimized">
               Analisamos o mercado e a legislação para sugerir nichos promissores e áreas de expansão para sua empresa
               no setor de saúde.
             </p>
           </div>
           <div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Benchmarking Regulatório</h3>
-            <p className="text-lg">
+            <p className="text-lg text-justified text-body-optimized">
               Realizamos um levantamento de dispositivos médicos e produtos para saúde similares já registrados e
               comercializados, analisando seus diferenciais e requisitos regulatórios.
             </p>
           </div>
           <div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Conexões com Fabricantes Internacionais</h3>
-            <p className="text-lg mb-3">
+            <p className="text-lg mb-3 text-justified text-body-optimized">
               Expandir sua rede de fornecedores e parceiros é crucial. Nós facilitamos esse processo:
             </p>
             <ul className="list-disc list-inside space-y-3 text-lg">

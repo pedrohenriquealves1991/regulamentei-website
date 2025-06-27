@@ -14,6 +14,57 @@ body {
   overflow-x: hidden; /* Adicionado para prevenir scroll horizontal */
 }
 
+/* Melhores práticas de tipografia e kerning */
+.text-optimized {
+  letter-spacing: -0.025em; /* Kerning otimizado para títulos */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-body-optimized {
+  letter-spacing: 0.01em; /* Kerning sutil para corpo de texto */
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-justified {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+/* Estilos mobile-first para evitar FOUC */
+.mobile-optimized-header {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .mobile-optimized-header {
+    background-color: transparent;
+    box-shadow: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Garantir que elementos fixos sejam renderizados corretamente desde o início */
+.whatsapp-button-mobile-ready {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -68,7 +68,9 @@ export function ServiceDetailPageClient({ service }: ServiceDetailPageClientProp
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 border-l-4 border-teal-500 pl-4">
               {service.title}
             </h1>
-            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">{service.content}</div>
+            <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed text-justified text-body-optimized">
+              {service.content}
+            </div>
             <BackToServicesLink />
           </AnimatedSection>
         </div>
