@@ -7,30 +7,31 @@
   --background-rgb: 248, 250, 252;
 }
 
+html,
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden; /* Adicionado para prevenir scroll horizontal */
+  overflow-x: hidden; /* Prevenção robusta de scroll horizontal */
 }
 
 /* Melhores práticas de tipografia e kerning */
 .text-optimized {
-  letter-spacing: -0.025em; /* Kerning otimizado para títulos */
+  letter-spacing: -0.025em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .text-body-optimized {
-  letter-spacing: 0.01em; /* Kerning sutil para corpo de texto */
+  letter-spacing: 0.01em;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Justificação responsiva - apenas em telas maiores */
+/* Justificação responsiva */
 .text-justified {
   text-align: left; /* Padrão para mobile */
   text-rendering: optimizeLegibility;
@@ -52,7 +53,7 @@ body {
 /* Para telas muito grandes, limita a largura das linhas para melhor legibilidade */
 @media (min-width: 1024px) {
   .text-justified {
-    max-width: 65ch; /* Aproximadamente 65 caracteres por linha */
+    max-width: 65ch;
   }
 }
 
@@ -73,35 +74,6 @@ body {
   text-align: left !important;
 }
 
-/* Indicador visual para teste - remover após verificação */
-.text-justified::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: transparent;
-}
-
-@media (max-width: 639px) {
-  .text-justified::before {
-    background: #ef4444; /* Vermelho para mobile (alinhado à esquerda) */
-  }
-}
-
-@media (min-width: 640px) and (max-width: 1023px) {
-  .text-justified::before {
-    background: #f59e0b; /* Amarelo para tablet (justificado) */
-  }
-}
-
-@media (min-width: 1024px) {
-  .text-justified::before {
-    background: #10b981; /* Verde para desktop (justificado + largura limitada) */
-  }
-}
-
 /* Estilos mobile-first para evitar FOUC */
 .mobile-optimized-header {
   background-color: white;
@@ -117,16 +89,6 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-}
-
-/* Garantir que elementos fixos sejam renderizados corretamente desde o início */
-.whatsapp-button-mobile-ready {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  z-index: 50;
-  opacity: 1;
-  transform: translateY(0);
 }
 
 @layer utilities {

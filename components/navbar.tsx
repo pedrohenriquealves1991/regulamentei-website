@@ -69,7 +69,7 @@ export function Navbar({ variant = "default" }: NavbarProps) {
   const showSolidBg = isMobile || isScrolled || variant === "internal" || isMenuOpen
 
   // Classes otimizadas para mobile-first
-  const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  const headerClasses = `fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
     showSolidBg ? "bg-white shadow-md py-2" : "bg-transparent py-4"
   } ${isMobile ? "mobile-optimized-header" : ""}`
 
@@ -142,7 +142,7 @@ export function Navbar({ variant = "default" }: NavbarProps) {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav ref={menuRef} className="md:hidden bg-white shadow-lg">
+        <nav ref={menuRef} className="md:hidden bg-white shadow-lg z-[60]">
           <ul className="py-4">
             {navLinks.map((link) => (
               <li key={link.name}>

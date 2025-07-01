@@ -14,7 +14,7 @@ export function WhatsappButton({ phoneNumber }: WhatsappButtonProps) {
   return (
     <button
       onClick={handleClick}
-      className="whatsapp-button-mobile-ready bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center transition-all duration-500 group"
+      className="fixed bottom-6 right-6 z-40 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center transition-all duration-500 group"
       aria-label="Contato via WhatsApp"
     >
       <WhatsappLogo className="w-6 h-6" />

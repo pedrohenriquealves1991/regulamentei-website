@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react"
 import Link from "next/link"
-import { motion } from "framer-motion"
+// Removido import do motion para simplificar no mobile
 import { ArrowRight } from "lucide-react"
 
 interface ServiceCardProps {
@@ -15,10 +15,7 @@ interface ServiceCardProps {
 export function ServiceCard({ title, shortDescription, icon, slug }: ServiceCardProps) {
   return (
     <Link href={`/servicos/${slug}`} passHref legacyBehavior>
-      <motion.a
-        className="border-l-4 border-teal-500 p-6 bg-white rounded-r shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group flex flex-col justify-between min-h-[16rem] md:min-h-[18rem]" // Altura mínima responsiva
-        whileHover={{ y: -5 }}
-      >
+      <a className="border-l-4 border-teal-500 p-6 bg-white rounded-r shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group flex flex-col justify-between min-h-[16rem] md:min-h-[18rem] block">
         <div>
           {" "}
           {/* Agrupador para título/ícone e descrição para o justify-between */}
@@ -42,7 +39,7 @@ export function ServiceCard({ title, shortDescription, icon, slug }: ServiceCard
             />
           </span>
         </div>
-      </motion.a>
+      </a>
     </Link>
   )
 }
